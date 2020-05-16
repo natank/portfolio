@@ -41,14 +41,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1280"
-     inkscape:window-height="961"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
      id="namedview184"
      showgrid="false"
-     inkscape:zoom="0.93171584"
-     inkscape:cx="474.23937"
-     inkscape:cy="527.77236"
-     inkscape:window-x="1358"
+     inkscape:zoom="1.8634317"
+     inkscape:cx="570.53716"
+     inkscape:cy="520.44438"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="mainSvg" />
@@ -703,7 +703,7 @@
        y="300"
        x="520"
        style="font-style:normal;font-weight:normal;font-size:11px;font-family:Sans;letter-spacing:0px;word-spacing:0px;display:inline;fill:#666666;fill-opacity:1;stroke:none"
-       xml:space="preserve">Font: Name #hexcode</text>
+       xml:space="preserve">Font: lato #21348</text>
   </g>
   <text
      id="text163"

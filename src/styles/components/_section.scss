@@ -1,0 +1,11 @@
+section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  
+}                   
+.featuredProducts, .featuredCategories {
+  &__title{
+    margin-bottom: 2rem;
+  }
+}

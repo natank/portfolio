@@ -1,0 +1,21 @@
+@font-face {
+  font-family: roboto-regular;
+  src: url('../../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: roboto-bold;
+  src: url('../../fonts/Roboto-Bold.ttf');
+}
+
+body {
+  font-family: roboto-regular, sans-serif;
+}
+
+html {
+  writing-mode: horizontal-lr;
+  direction: ltr;
+}
+
+
+

@@ -1,0 +1,17 @@
+.logo {
+  text-align: center;
+  &__name, &__role {
+    line-height: 1;
+    margin: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  &__name {
+    font-family: roboto-bold;
+    margin-bottom: .5rem;
+  }
+  &__role{
+    font-family: roboto-regular;
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,63 @@
+.hero {
+  padding: 1.5rem;
+  margin: 0;
+  background-color: $color-important;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0 100%);
+  // height: 80vh;
+  > * {
+    text-transform: uppercase;
+  }
+  h2 span {
+    text-transform: capitalize;
+    margin-right: .3rem;
+  }
+
+  &__hello {
+    font-size: 7rem;
+    margin: 0 auto;
+    line-height: .8;
+    margin-bottom: 3rem;
+  }
+  &__name {
+    font-size: 5rem;
+    color: $color-info;
+    letter-spacing: .25rem;
+    margin: 0 auto;
+    line-height: .8;
+    
+    margin-bottom: 3rem;
+  }
+  &__description {
+    text-align: justify;
+    letter-spacing: .05rem;
+    padding-left:.5rem;
+    margin-bottom: 3rem;
+    
+    &--2 {
+      letter-spacing: .0rem;
+      font-size: 1.13rem;
+      padding-left:.5rem;
+      margin:0;
+      line-height: .8;
+    }
+    &--3 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+    &--4{
+      margin:0;
+      line-height: .8;
+      font-size: 2.2rem;
+      letter-spacing: .2rem;
+    }
+    &--5 {
+      margin: 0;
+      line-height: .8;
+      font-size: 2.2rem;
+      text-align: center;
+    }
+    &--2, &--3, &--4 {
+      margin-bottom: .5rem;;
+    }
+  }
+}

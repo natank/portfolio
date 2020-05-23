@@ -1,0 +1,24 @@
+.navbar {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    font-size: .75rem;
+  }
+  .current {
+    border-bottom: 1px solid $color-secondary;
+  }
+  li {
+    padding: .5rem .5rem;
+  }
+  li:hover {
+    color: $color-primary;
+    background-color: $color-secondary;
+  }
+}

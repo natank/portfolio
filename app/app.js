@@ -123,6 +123,9 @@ const generalMW = (function (app) {
   app.set('views', path.join(__dirname, "../src/views"))
 
   app.use(express.static(path.join(__dirname, '../dist')));
+  app.use(express.static(path.join(__dirname, '../images')));
+  app.use(express.static(path.join(__dirname, '../icons')));
+
 })(app)
 
 

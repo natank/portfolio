@@ -1,0 +1,30 @@
+.stack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1rem;
+    & > * {
+        text-align: center;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .stack__fe, .stack__be {
+        justify-content: space-between;
+    }
+    img {
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    h1 {
+        grid-column: 1 / 4;
+        font-size: xxx-large;
+    }
+    h2 {
+        margin-bottom: 3rem;
+    }
+}

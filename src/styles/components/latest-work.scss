@@ -3,18 +3,25 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0 100%);
+  padding-bottom: 30%;
   h1 {
     grid-column: 1/-1;
-    text-transform: uppercase;
     color: $color-secondary;
     text-align: center;
   }
+  
   picture {
     position: relative;
-    img {
-      display: inline-block;
-      width: 100%;
+    border: 3px solid $color-info;
+    img{
+      display: block;
+      --image-width: 100%;
+      width: var(--image-width);
+      object-fit: cover;
+      margin: 0;
     }
+    
     div {
       position: absolute;
       top: 0;
@@ -22,8 +29,14 @@
       color: $color-secondary;
       width: 100%;
       height: 100%;
-      background-color: rgba($color-important, .4);
+      background-color: rgba($color-info, .4);
+      padding: 5%;
       z-index: 10;
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: normal;
+      }
     }
   }
 

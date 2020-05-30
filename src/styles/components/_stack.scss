@@ -2,7 +2,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+    color: $color-info;
     gap: 1rem;
+    background-color: rgba($color-secondary, .7);
     & > * {
         text-align: center;
     }
@@ -25,5 +27,6 @@
     }
     h2 {
         margin-bottom: 3rem;
+        font-size: 2rem;
     }
 }

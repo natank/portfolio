@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const isDevelopment = process.env.NODE_ENV !== 'production'
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -10,7 +11,6 @@ module.exports = {
       "webpack-hot-middleware/client?reload=true",
       "./src/main.js"
     ],
-    payments: ["./src/scripts/stripe.js"]
   },
   mode: "development",
   output: {
@@ -129,7 +129,17 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: isDevelopment ? '[name].css' : '[name].css',
       chunkFilename: isDevelopment ? '[id].css' : '[id].css'
-    })
+    }),
+    new BrowserSyncPlugin(
+      {
+        host: 'localhost',
+        port: 3000,
+        proxy: 'http://localhost:3100/'
+      },
+      {
+        reload: false
+      }
+    )
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.scss']

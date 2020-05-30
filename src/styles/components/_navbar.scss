@@ -1,24 +1,120 @@
-.navbar {
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  a {
-    text-decoration: none;
-    color: inherit;
-    text-transform: uppercase;
-    font-size: .75rem;
+.navbar{
+  position: relative;
+  
+  &__toggle {
+    display: block;
+    position: relative;
+    z-index:1;
+    user-select: none;
+    .navbar__toggle__slice {
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      right: 2rem;
+      background: #cdcdcd;
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+      &:first-child{
+        transform-origin: 0% 0%;
+      }
+      &:nth-last-child(2){
+        transform-origin: 0% 100%;
+      }
+    }
+    input {
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      cursor: pointer;
+
+      opacity: 0;
+      z-index:2;
+      // slide from left
+      &:checked ~ ul {
+        transform: none;
+      }
+
+      /* 
+      * Transform all the slices of hamburger
+      * into a crossmark.
+      */
+      &:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        
+        // hide the middle slice
+        &:nth-last-child(3) {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        // the last one should go to the other direction
+        &:nth-last-child(2) {
+          transform: rotate(-45deg) translate(0, -1px);
+        }
+      }
+    }
+    .navbar__toggle__slice, input {
+      display: block;
+      @include m-screen-md {
+        display: none;
+      }
+    }
   }
-  .current {
-    border-bottom: 1px solid $color-secondary;
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    padding-top: 70px;
+    padding-right: 0px;
+    margin: 0;
+    height: 100vh;
+    width: 7rem;
+    list-style-type: none;
+    background-color: rgba($color-primary,.8);
+    color: $color-secondary;
+    position: absolute;
+    top: -2rem;
+    right: 0px;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+    @include m-screen-md {
+      flex-direction: row;
+      align-items: center;
+      padding-top:0;
+      color: $color-secondary;
+      height: 2rem;
+      z-index: 10;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      text-transform: uppercase;
+      font-size: .75rem;
+    }
+    .current {
+      border-bottom: 1px solid $color-secondary;
+    }
+    li {
+      padding: .5rem .5rem;
+    }
+    li:hover {
+      color: $color-primary;
+      background-color: $color-secondary;
+    }
   }
-  li {
-    padding: .5rem .5rem;
-  }
-  li:hover {
-    color: $color-primary;
-    background-color: $color-secondary;
-  }
+  
 }

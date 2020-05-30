@@ -1,11 +1,18 @@
-ul.navbar
-  li.current 
-    a(href="#about") about
-  li 
-    a(href="#about") stack
-  li 
-    a(href="#about") portfolio
-  li 
-    a(href="#about") contact
-  li 
-    a(href="#about") cv
+
+.navbar(role="navigation")
+  .navbar__toggle
+    input(type="checkbox")
+    span.navbar__toggle__slice
+    span.navbar__toggle__slice
+    span.navbar__toggle__slice
+    ul.navbar__nav
+      a(href="#about") 
+        li.current about
+      a(href="#about") 
+        li stack
+      a(href="#about") 
+        li portfolio
+      a(href="#about") 
+        li contact
+      a(href="#about")
+        li cv

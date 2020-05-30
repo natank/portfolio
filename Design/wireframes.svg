@@ -810,15 +810,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.55367233"
-     inkscape:cx="1363.9835"
-     inkscape:cy="3200.3575"
+     inkscape:zoom="0.39150546"
+     inkscape:cx="1440.4786"
+     inkscape:cy="2141.8808"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="961"
-     inkscape:window-x="1358"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      showguides="true"
@@ -1169,7 +1169,7 @@
            height="238.24834"
            x="325.84625"
            y="-217.16457" /></flowRegion><flowPara
-         id="flowPara1367"></flowPara></flowRoot>  </g>
+         id="flowPara1367" /></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
      id="layer4"
@@ -2105,7 +2105,7 @@
          y="978.73303"
          style="fill:#213458;fill-opacity:1;stroke-width:0.26458332">CONTACT</tspan></text>
     <flowRoot
-       transform="matrix(0.24436736,0,0,0.24436736,-7.8038086,377.45821)"
+       transform="matrix(0.24436736,0,0,0.24436736,-7.8038086,372.69568)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Levenim MT';-inkscape-font-specification:'Levenim MT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#213458;fill-opacity:1;stroke:none;stroke-width:1.08272779"
        id="flowRoot1339"
        xml:space="preserve"><flowRegion
@@ -2114,11 +2114,11 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Levenim MT';-inkscape-font-specification:'Levenim MT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#213458;fill-opacity:1;stroke-width:1.08272779"
            y="1659.8346"
            x="132.33334"
-           height="243.16255"
-           width="1009.0417"
+           height="400.79892"
+           width="1022.8694"
            id="rect1331" /></flowRegion><flowPara
          id="flowPara1335"
-         style="fill:#213458;fill-opacity:1;stroke-width:1.08272779">Full Stack Developer respoibilities include designing user interactions on websites, developing servers and databases for website functionality and coding for mobile platforms.</flowPara><flowPara
+         style="fill:#213458;fill-opacity:1;stroke-width:1.08272779">Full Stack Developer respoibilities including designing user interactions on websites, developing servers and databases for website functionality and coding for mobile platforms.</flowPara><flowPara
          id="flowPara1337"
          style="fill:#213458;fill-opacity:1;stroke-width:1.08272779" /></flowRoot>    <flowRoot
        xml:space="preserve"

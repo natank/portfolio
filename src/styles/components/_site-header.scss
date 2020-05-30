@@ -1,9 +1,12 @@
 .site-header {
-  background-color: $color-primary;
+  background-color: rgba($color-primary,.8);
   color: $color-secondary;
-  padding: .5rem 2rem;
+  padding: 1rem 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  .logo {
+    position: relative;
+    left: 2rem;
+  }
 }

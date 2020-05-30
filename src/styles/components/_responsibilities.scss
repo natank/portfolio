@@ -1,0 +1,23 @@
+.responsibilities {
+  color: $color-info;
+  background-color: rgba($color-secondary, .7);
+  border-radius: 50%;
+  p {
+    text-align: center;
+    color: $color-info;
+  }
+  ul {
+    padding: 0;
+    text-align: 0;
+    li {
+      list-style-type: none;
+      text-align: center;
+      font-size: 1.9rem;
+      line-height: 1.8;
+    }
+    &.list {
+      font-family: Roboto-Bold;
+      
+    }
+  }
+}

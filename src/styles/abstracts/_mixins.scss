@@ -1,0 +1,39 @@
+// scss variables defining viewport values
+$screen-xxl: 3840px;
+$screen-xl: 1920px;
+$screen-lg: 1260px;
+$screen-md: 768px;
+$screen-sm: 420px;
+$screen-xs: 320px; //default
+
+// scss media query mixins
+
+@mixin m-screen-sm {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin m-screen-md {
+  @media (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin m-screen-lg {
+  @media (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin m-screen-xl {
+  @media (min-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin m-screen-xxl {
+  @media (min-width: $screen-xxl) {
+    @content;
+  }
+}

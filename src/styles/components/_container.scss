@@ -1,5 +1,11 @@
 .container {
-  width: 60%;
+  width: 100%;
+  @include m-screen-md{
+    width: 80%;
+  }
+  @include m-screen-lg{
+    width: 60%;
+  }
   min-width: 235px;
   max-width: 960px;
   margin: auto;
@@ -13,6 +19,6 @@
     &> *{
       font-weight: normal;
     }
-    width:335px;
+    width:450px;
   }
 }

@@ -1,13 +1,40 @@
 .hero {
-  padding: 1.5rem;
-  margin: 0;
-  margin-bottom: 3rem;
-  // background-color: $color-important;
+  position: relative;    
+  height: 40vh;
+  padding-top: 1rem;
+  margin: 0 auto 3rem auto;
   background: linear-gradient(135deg, rgba($color-important,.7) 0%, rgba($color-important,.3) 150%);
+  color: $color-secondary;    
+
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0 100%);
-  
-  > * {
+  text-align: center;
+  @include m-screen-sm{
+    padding-top: 3rem;
+    height: 60vh;
+  }
+  @include m-screen-md{
+    padding-top: 3.5rem;
+    height: 80vh;
+  }
+  @include m-screen-xl{
+    padding-top: 5.5rem;
+    height: 80vh;
+  }
+
+
+  &> *{
+    font-weight: normal;
     text-transform: uppercase;
+  }
+
+  h1 {
+    margin-bottom: 0rem;
+    margin-top: 0;
+    padding-top: 1rem;
+    @include m-screen-md {
+      margin-top: 0;
+
+    }
   }
   h2 span {
     text-transform: capitalize;
@@ -15,62 +42,92 @@
   }
 
   &__greeting {
-    font-size: 4.8rem;
     text-transform: capitalize;
     margin: 0 auto;
     line-height: .8;
     margin-bottom: 1rem;
     display: inline-block;
+    @include m-screen-md{
+      font-size: 4.8rem;  
+    }
   }
   &__name {
-    font-size: 4.8rem;
     color: $color-info;
     letter-spacing: .25rem;
     margin: 0 auto;
     margin-left: .5rem;
     line-height: .8;
     display: inline-block;
+    @include m-screen-md{
+      font-size: 4.8rem;
+    }
   }
   &__description {
+    padding-left:.0rem;
+    margin: 0rem auto 2rem auto;
+    letter-spacing: .03rem;
+    word-spacing: .0rem;
+
+    font-size: 1.2rem;
     text-align: center;
     color: $color-primary;
-    letter-spacing: .01rem;
-    padding-left:.5rem;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    word-spacing: .2rem;
-    margin: 2rem 0;
+    
+    @include m-screen-md{
+      margin: 2rem 0;
+      font-size: 1.8rem;
+      word-spacing: .1rem;
+      letter-spacing: .01rem;
+      
+    }
     &--2 {
       letter-spacing: .0rem;
-      font-size: 1.3rem;
       margin:0;
       margin-bottom: 1rem;
+      word-spacing: .0rem;
+      font-size: 1rem;
       line-height: .8;
-      word-spacing: .4rem;
+      @include m-screen-md{
+        font-size: 1.3rem;
+        word-spacing: .35rem;
+      }
     }
     &--3 {
-      font-size: 2.5rem;
-      letter-spacing: .15rem;
       margin: 0;
-      word-spacing: .4rem;
+      font-size: 1.8rem;
+      letter-spacing: 0.08rem;
+      word-spacing: .0rem;
+      @include m-screen-md{
+        font-size: 2.4rem;
+        letter-spacing: .15rem;
+        word-spacing: .1rem;
+      }
     }
     &--4{
       margin:0;
       line-height: 1.2;
-      font-size: 2.5rem;
-      letter-spacing: .2rem;
-      word-spacing: 3rem;
+      font-size: 2rem;
+      letter-spacing: .1rem;
+      word-spacing: .0rem;
+      @include m-screen-md{
+        font-size: 2.5rem;
+        letter-spacing: .3rem;
+        word-spacing: 2.5rem;
+      }
     }
     &--5 {
       margin: 0;
       line-height: 1.2;
-      font-size: 2.5rem;
+      font-size: 2rem;
       text-align: center;
       letter-spacing: 0rem;
-      word-spacing: 1.2rem;
+      word-spacing: .2rem;
+      @include m-screen-md{
+        font-size: 2.5rem;
+      }
     }
     &--3, &--4 {
-      margin-bottom: .5rem;;
+      margin-bottom: .5rem;
+      word-spacing: .1rem;
     }
   }
 }

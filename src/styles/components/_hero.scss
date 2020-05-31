@@ -71,7 +71,10 @@
     font-size: 1.2rem;
     text-align: center;
     color: $color-primary;
-    
+    em {
+      color: $color-secondary;
+      font-style: normal;
+    }
     @include m-screen-md{
       margin: 2rem 0;
       font-size: 1.8rem;

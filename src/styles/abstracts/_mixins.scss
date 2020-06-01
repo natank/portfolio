@@ -8,6 +8,12 @@ $screen-xs: 320px; //default
 
 // scss media query mixins
 
+@mixin m-screen-xs {
+  @media (min-width: $screen-xs) {
+    @content;
+  }
+}
+
 @mixin m-screen-sm {
   @media (min-width: $screen-sm) {
     @content;

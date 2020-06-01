@@ -1,11 +1,33 @@
 .contact {
-  padding-top: 10rem;
-  padding-bottom: 8rem;
+  clip-path: polygon(0 5rem, 100% 0%, 100% 85%, 0 100%);
   margin-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   background: linear-gradient(165deg, rgba($color-important,.8) 0%, rgba(darken($color-secondary, 0%), .1) 200%);
+  
   color: $color-secondary;
   
-  clip-path: polygon(0 7rem, 100% 0%, 100% 80%, 0 100%);
+  
+  @include m-screen-xs {
+    
+  }
+  @include m-screen-sm {
+    
+  }
+  @include m-screen-md {
+    
+  }
+  @include m-screen-lg {
+    clip-path: polygon(0 7rem, 100% 0%, 100% 80%, 0 100%);
+    background: linear-gradient(165deg, rgba($color-important,.8) 0%, rgba(darken($color-secondary, 0%), .1) 200%);  
+  }
+
+  @include m-screen-xl {
+    
+  }
+
+
+
   .title {
     margin-bottom: 3rem;
     color: $color-info;
@@ -13,12 +35,16 @@
 
   
   p{
+    position: relative;
+    width: 80%;
+    left: 6rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    
     display: grid;
     gap: 3rem;
     grid-template-columns: 3rem 1fr;
-    width: 80%;
-    margin: auto;
-    margin-bottom: 2rem;
+
     color: $color-secondary;
 
   }

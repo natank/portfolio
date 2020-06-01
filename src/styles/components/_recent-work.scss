@@ -1,19 +1,24 @@
-.latest-work {
-  background: linear-gradient(165deg, rgba($color-important,.7) 0%, rgba(darken($color-secondary, 0%), .3) 90%,rgba($color-secondary,.1));
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+.recent-work {
   clip-path: polygon(0 7rem, 100% 0%, 100% 90%, 0 100%);
+  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 4rem;
   padding-bottom: 13rem;
   padding-top: 10rem;
+  background: linear-gradient(135deg, rgba($color-important,.7) 0%, rgba($color-important,.3) 150%);
+ 
   h1 {
+    margin-bottom: 0;
     grid-column: 1/-1;
+
     color: $color-secondary;
     text-align: center;
   }
   
-  
   picture {
+    width: 60%;
+    margin: auto;
     position: relative;
     border: 3px solid $color-info;
     box-shadow: 5px 5px 5px 0px rgba($color-primary,0.75);

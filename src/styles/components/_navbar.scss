@@ -36,10 +36,7 @@
 
       opacity: 0;
       z-index:2;
-      // slide from left
-      &:checked ~ ul {
-        transform: none;
-      }
+      
 
       /* 
       * Transform all the slices of hamburger
@@ -67,47 +64,60 @@
       }
     }
   }
+
+  &__toggle {
+    input {
+      // slide from left
+      &:checked ~ ul.navbar__nav {
+        right: 0;
+        transform: translate(0%, -50%);
+        @include m-screen-md {
+          transform: translate(-250%, -50%);
+        }
+      }
+    }
+  }
   &__nav {
-    height: 100vh;
+    height: 50vh;
     width: 7rem;
     margin: 0;
 
-    position: absolute;
-    top: -2rem;
-    right: 0px;
+    position: fixed;
+    top: 50%;
+    
     transform-origin: 0% 0%;
-    transform: translate(100%, 0);
+    transform: translate(100%, -50%);
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    padding-top: 70px;
-    padding-right: 0px;
     
-   
+    padding: 0;
+    
     list-style-type: none;
     background-color: rgba($color-primary,.8);
     color: $color-secondary;
     
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
+    
     @include m-screen-md {
-      flex-direction: row;
-      align-items: center;
-      padding-top:0;
-      color: $color-secondary;
-      height: 2rem;
+      position: absolute;
+      padding-top: 70px;
       z-index: 10;
-      right: 0;
+      height: 2rem;
+      transform: none;
+      transform: translate(-250%, -50%);
       top: 50%;
-      transform: translateY(-50%);
+
+      padding-top:0;
+      flex-direction: row;
+      color: $color-secondary;
+      background-color: rgba($color-primary,0);
     }
     a {
       text-decoration: none;
       color: inherit;
-      text-transform: uppercase;
       font-size: .75rem;
     }
     .current {
@@ -115,6 +125,7 @@
     }
     li {
       padding: .5rem .5rem;
+      text-transform: uppercase;
     }
     li:hover {
       color: $color-primary;

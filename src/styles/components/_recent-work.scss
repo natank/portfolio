@@ -1,5 +1,5 @@
 .recent-work {
-  clip-path: polygon(0 7rem, 100% 0%, 100% 90%, 0 100%);
+  clip-path: polygon(0 5rem, 100% 0%, 100% 93%, 0 100%);
   
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -8,12 +8,12 @@
   padding-top: 10rem;
   background: linear-gradient(135deg, rgba($color-important,.7) 0%, rgba($color-important,.3) 150%);
  
-  h1 {
+  .title {
     margin-bottom: 0;
     grid-column: 1/-1;
-
-    color: $color-secondary;
     text-align: center;
+    font-size: var(--title-font-size);
+    color: $color-secondary;
   }
   
   picture {

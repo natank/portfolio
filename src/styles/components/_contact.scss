@@ -1,8 +1,8 @@
 .contact {
-  clip-path: polygon(0 5rem, 100% 0%, 100% 85%, 0 100%);
-  margin-bottom: 10rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  clip-path: polygon(0 3rem, 100% 0%, 100% 85%, 0 100%);
+  margin-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background: linear-gradient(165deg, rgba($color-important,.8) 0%, rgba(darken($color-secondary, 0%), .1) 200%);
   
   color: $color-secondary;
@@ -15,47 +15,106 @@
     
   }
   @include m-screen-md {
-    
+    clip-path: polygon(0 6rem, 100% 0%, 100% 80%, 0 100%);
+    padding-bottom: 5rem;
   }
   @include m-screen-lg {
-    clip-path: polygon(0 7rem, 100% 0%, 100% 80%, 0 100%);
-    background: linear-gradient(165deg, rgba($color-important,.8) 0%, rgba(darken($color-secondary, 0%), .1) 200%);  
+    clip-path: polygon(0 6rem, 100% 0%, 100% 85%, 0 100%);
+    margin-bottom: 10rem;
+    padding-top: 7rem;
+    padding-bottom: 8rem;
+    background: linear-gradient(165deg, rgba($color-important,.8) 0%, rgba(darken($color-secondary, 0%), .1) 200%);
+    
   }
-
+  
   @include m-screen-xl {
     
   }
-
-
-
+  
+  
+  
   .title {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: $color-info;
+    font-size: var(--title-font-size);
+    @include m-screen-xs {
+      margin-bottom: 1.5rem;
+    }
+    @include m-screen-sm {
+      margin-bottom: 2rem;
+    }
+    
+    @include m-screen-lg {
+      margin-bottom: 3rem;
+    }
   }
 
   
   p{
     position: relative;
     width: 80%;
-    left: 6rem;
     margin: auto;
     margin-bottom: 2rem;
     
     display: grid;
-    gap: 3rem;
-    grid-template-columns: 3rem 1fr;
-
+    gap: 1rem;
+    grid-template-columns: 1rem 1fr;
+    
     color: $color-secondary;
+    
+    @include m-screen-xs {
+      width: 80%;
+      left: 0rem;
+      grid-template-columns: 1rem 1fr;
+      gap: 1.5rem;
+    }
 
+    @include m-screen-sm {
+      
+    }
+
+    @include m-screen-md {
+      left: 2rem;
+      gap: 3rem;
+    }
+    @include m-screen-lg {
+      width: 80%;
+      left: 2rem;
+      grid-template-columns: 3rem 1fr;
+      gap: 3rem;
+    }
+    @include m-screen-xl {
+      left: 5rem;
+    }
   }
   img, a {
     display: block;
   }
   img {
-    width: 3rem;
+    width: 1rem;
+    @include m-screen-sm {
+      width: 1.5rem;
+    }
+    @include m-screen-md {
+      width: 2rem;
+    }
+    @include m-screen-lg {
+      width: 3rem;
+    }
   }
   a {
     color: $color-secondary;
-    font-size: 2rem;
+    font-size: 1rem;
+    line-height: 1;
+    @include m-screen-sm {
+      font-size: 1.2rem;
+    }
+    @include m-screen-md {
+      font-size: 2rem;
+    }
+    @include m-screen-lg {
+      font-size: 2rem;
+    
+    }
   }
 }

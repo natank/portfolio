@@ -2,18 +2,29 @@
   color: $color-info;
   background-color: rgba($color-secondary, .7);
   border-radius: 50%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  .title {
+    font-size: var(--title-font-size);
+  }
+  h1.title {
+    font-size: var(--title-font-size);
+  }
   p {
     text-align: center;
     color: $color-info;
   }
   ul {
     padding: 0;
-    text-align: 0;
+    
     li {
       list-style-type: none;
-      text-align: center;
-      font-size: 1.9rem;
+      text-align: left;
+      font-size: var(--paragraph-font-size);
       line-height: 1.8;
+      @include m-screen-md {
+        text-align: center;
+      }
     }
     &.list {
       font-family: Roboto-Bold;

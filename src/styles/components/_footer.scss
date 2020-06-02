@@ -2,12 +2,17 @@
   background-color: rgba($color-primary,.8);
   display: grid;
   column-gap: 2rem;
-  row-gap: 0rem;
-  grid-template-columns:2fr 2fr 1fr;
+  row-gap: 1rem;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   padding: 0rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: $color-secondary;
+  @include m-screen-md {
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    row-gap: 2rem;
+  }
   .logo {
     width: 80%;
   }

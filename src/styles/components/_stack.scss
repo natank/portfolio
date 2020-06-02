@@ -3,8 +3,11 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     color: $color-info;
-    gap: 1rem;
+    gap: .0rem;
     background-color: rgba($color-secondary, .7);
+    @include m-screen-xs {
+        gap: .0rem;
+    }
     & > * {
         text-align: center;
     }
@@ -22,11 +25,15 @@
         margin-bottom: 3rem;
         text-align: center;
     }
-    h1 {
+    .title {
         grid-column: 1 / 4;
+        font-size: var(--title-font-size);
     }
     h2 {
-        margin-bottom: 3rem;
-        font-size: 2rem;
+        margin-bottom: 1rem;
+        @include m-screen-sm {
+            margin-bottom: 3rem;
+        }
+        font-size: var(--sub-title-font-size);
     }
 }

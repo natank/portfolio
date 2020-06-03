@@ -8,20 +8,25 @@
 
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0 100%);
   text-align: center;
+  padding-top: 2rem;
   @include m-screen-xs {
     height: 27rem
   }
   @include m-screen-sm{
     padding-top: 3rem;
-    height: 27rem;
+    height: 31rem;
   }
   @include m-screen-md{
     padding-top: 5rem;
-    height: 40rem;
+    height: 45rem;
+  }
+  @include m-screen-lg{
+    padding-top: 5rem;
+    height: 45rem;
   }
   @include m-screen-xl{
-    padding-top: 13rem;
-    height: 40vh;
+    padding-top: 4rem;
+    height: 45rem;
   }
 
 
@@ -138,6 +143,19 @@
     &--3, &--4 {
       margin-bottom: .5rem;
       word-spacing: .1rem;
+    }
+  }
+  &__welcome {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    font-family: fantasy;
+    color: $color-info;
+    @include m-screen-md {
+      font-size: 1.8rem;
+    }
+    @include m-screen-xl {
+      font-size: 2rem;
+      padding-top: 2rem;
     }
   }
 }

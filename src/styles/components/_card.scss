@@ -1,0 +1,49 @@
+.card {
+    width: 350px;
+    overflow: hidden;;
+    text-align: center;
+    background-color: lighten($color-success, 12%);
+    text-align: center;
+    
+    .card__content {
+        padding: 0 1rem;
+    }
+    picture {
+        padding: 0;
+        img {
+            width: 100%;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+        }
+    }
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+    button {
+        margin-bottom: 3rem;
+        border-radius: 1rem;
+        text-transform: uppercase;
+        padding: .5rem 1rem;
+    }
+    &__modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-secondary;
+        &--hidden {
+            display: none;
+            visibility: hidden;
+        }
+        &--visible {
+            display: block;
+            visibility: visible;
+        }
+    }
+    
+}

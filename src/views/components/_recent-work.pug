@@ -1,15 +1,11 @@
 section.recent-work
   h1.title recent work
-  picture
-    img(src="eduactivity.jpg")
-    div 
-      h2 eduactivity
-      p Multi user, Authorization based online shop
-      a(href="#") learn more
-  picture
-    img(src="eduactivity.jpg")
-    div 
-      h2 eduactivity
-      p Multi user, Authorization based online shop
-      a(href="#") learn more
+  .recent-work__cards
+    - let title, description, repo, website, imgUrl
+    - title = 'eduactivity'
+    - description = 'Full Stack Online Shop for digital, donloadable products. Featuring Express, Mongo DB and SSR(PUG Templates)'
+    - repo ='https://eduactivity.githup.com'
+    - website = 'https://eduactivity.heroku.com'
+    - imgUrl = 'eduactivity.jpg'
+      include _card
   

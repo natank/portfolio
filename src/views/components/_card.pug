@@ -1,10 +1,19 @@
 .card
-    picture
-      img(src= imgUrl)
-    div.card__content
-      h2= title
-      p= description
-      button.js-modal-show learn more
-    .card__modal.card__modal--visible
-        p lorem ipsum dolor sit amet
-        button.js-modal-hide close
+  picture
+    img.card__img(src= imgUrl)
+  div.card__content
+    h2= title
+    p= description
+    a.card__action.js-modal-open learn more
+  .card__modal.card__modal--close
+    .modal__content
+      picture.modal__img
+        img(src= imgUrl)
+      .modal__info
+        p.modal__close.js-modal-close X
+        h2.modal__title= title
+        p.modal__description= description
+        p.modal__repo Repo: 
+          a(href= repo) #{repo}
+        p.modal__website Website:
+          a(href= website)  #{website}

@@ -1,12 +1,26 @@
 .site-header {
+  position:fixed;
+  
+  z-index: 1000;
+  top: 0;
   background-color: rgba($color-primary,.8);
   color: $color-secondary;
   padding: 1rem 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  transition: all 1s ease-in-out;
   .logo {
     position: relative;
     left: 2rem;
+  }
+  &--visible {
+    top: 0;
+    opacity: 1;
+  }
+  &--hidden {
+    top: -3rem;
+    opacity: 0;
   }
 }

@@ -1,6 +1,7 @@
 .container {
   position: relative;
   width: 100%;
+  overflow-x: hidden;
 
   @include m-screen-lg{
     width: 100%;

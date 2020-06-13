@@ -4,7 +4,7 @@ let last_known_scroll_position = window.scrollY;
 let last_known_scroll_direction = 'up';
 
 function onScroll(e) {
-
+  console.log("scrolled");
   let currScrollDir = window.scrollY > last_known_scroll_position ? 'down' : 'up';
   // User is scrolling in the same direction
   if (currScrollDir === last_known_scroll_direction) {

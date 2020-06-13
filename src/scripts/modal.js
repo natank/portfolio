@@ -1,4 +1,5 @@
 const toggleScroll = require('./toggleScroll');
+let btnModalOpen, btnModalClose, navItems;
 
 function openModal(event) {
   // Clone these modal code right after the container element
@@ -40,7 +41,15 @@ function closeModal(event) {
   }, 1000)
 }
 
-module.exports = {
-  open: openModal,
-  close: closeModal
-}
+
+document.addEventListener('DOMContentLoaded', () => {
+  btnModalOpen = document.querySelectorAll('.js-modal-open');
+  btnModalClose = document.querySelectorAll('.js-modal-close');
+  btnModalOpen.forEach(btn => {
+    btn.addEventListener('click', openModal)
+  })
+  btnModalClose.forEach(btn => {
+    btn.addEventListener('click', closeModal)
+  })
+})
+

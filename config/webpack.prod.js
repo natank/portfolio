@@ -1,4 +1,3 @@
-// require('dotenv').config();
 const path = require("path");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -6,13 +5,11 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const MinifyPlugin = require("babel-minify-webpack-plugin");
-const CompressionPlugin = require("compression-webpack-plugin");
-const BrotliPlugin = require('brotli-webpack-plugin');
+
 module.exports = env => {
   return {
     entry: {
       main: ["./src/main.js"],
-      payments: ["./src/scripts/stripe.js"]
     },
     mode: "production",
     output: {

@@ -3,8 +3,8 @@
     img.card__img(src= imgUrl)
   div.card__content
     h2= title
-    p= description
-    a.card__action.js-modal-open learn more
+    p.js-content__description= description
+    a.btn.js-modal-open learn more &nearr;
   .card__modal.card__modal--close
     .modal__content
       picture.modal__img
@@ -14,6 +14,6 @@
         h2.modal__title= title
         p.modal__description= description
         p.modal__repo Repo: 
-          a(href= repo) #{repo}
+          a(href= repo target="_blank") #{repo}
         p.modal__website Website:
-          a(href= website)  #{website}
+          a(href= website target="_blank")  #{website}

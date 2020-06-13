@@ -136,8 +136,10 @@
       text-align: center;
       letter-spacing: 0rem;
       word-spacing: .2rem;
+      margin-bottom: 1rem;
       @include m-screen-md{
         font-size: 2.5rem;
+        margin-bottom: 2rem;
       }
     }
     &--3, &--4 {
@@ -157,5 +159,27 @@
       font-size: 2rem;
       padding-top: 2rem;
     }
+  }
+  &__btn {
+    display: block;
+    text-decoration: none;
+    color: $color-secondary;
+    background-color: $color-primary;
+    margin: auto;
+    width: 8rem;
+    border-radius: 1rem; 
+    padding: 10px 3px;
+    font-size: .8rem;
+
+    @include m-screen-md{
+      border-radius: 2rem; 
+      padding: 15px 5px;
+      font-size: 1rem;
+      width: 9rem;
+    }
+    &:hover {
+      background-color: lighten($color-primary, 20%);
+    }
+      
   }
 }

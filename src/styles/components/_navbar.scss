@@ -88,8 +88,8 @@
     transform-origin: 0% 0%;
     transform: translate(100%, -50%);
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+
     align-items: center;
     justify-content: center;
     
@@ -109,7 +109,7 @@
       transform: none;
       transform: translate(-250%, -50%);
       top: 50%;
-
+      display: flex;
       padding-top:0;
       flex-direction: row;
       color: $color-secondary;

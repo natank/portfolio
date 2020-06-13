@@ -5,6 +5,14 @@ function scrollTo(event) {
   element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-module.exports = {
-  scrollTo
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const navItems = document.querySelectorAll('.navbar__nav li');
+  const recentWorkBtn = document.querySelector('#btn-recent-work');
+  const items = [...navItems, recentWorkBtn]
+  items.forEach(item => {
+    item.addEventListener('click', scrollTo)
+  })
+  // exclude the 'cv' link from smoothScroll
+  const cvDownloadLink = document.querySelector('#cv');
+  cvDownloadLink.removeEventListener('click', scrollTo)
+})

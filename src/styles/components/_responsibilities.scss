@@ -20,14 +20,44 @@
     li {
       list-style-type: none;
       text-align: left;
-      font-size: var(--paragraph-font-size);
+      font-size: calc(var(--paragraph-font-size) + .0rem);
       line-height: 1.8;
+      margin-bottom: 1.3rem;
+      text-align: center;
+      @include m-screen-sm {
+        font-size: calc(var(--paragraph-font-size) + .4rem);
+      }
       @include m-screen-md {
-        text-align: center;
+        font-size: calc(var(--paragraph-font-size) - .4rem);
+        margin-bottom: 0;
       }
     }
     &.list {
-      font-family: Roboto-Bold;
+      font-family: Roboto-Bold;      
+    }
+  }
+  ul.list{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    @include m-screen-sm{
+
+      li:before{
+        content: '⌨'; margin-left: -20px;margin-right: 10px;
+      }
+      li:last-child:before{
+        content:  ''; margin-left: 1rem;margin-right: 10px;
+      }
+      li {
+        text-align: left;
+      }
+    }
+    @include m-screen-md {
+      li {
+        font-size: calc(var(--paragraph-font-size) - 8px);
+      }
+    }
+    @include m-screen-lg { 
       
     }
   }

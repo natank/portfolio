@@ -21,14 +21,12 @@ class RevealOnScroll {
     window.addEventListener('scroll', this.scrollThrottle)
     // upon window refresh, refresh the browserHeight property
     window.addEventListener('resize', debounce(() => {
-      console.log("resize just run")
       this.browserHeight = window.innerHeight
     }, 333))
   }
 
   // scroll event handler (to be throttled)
   calcCaller() {
-    console.log('Scroll function ran');
     // calc which items should be reveald upon scroll event
     this.itemsToReveal.forEach(el => {
       if (!el.isRevealed) {
@@ -40,7 +38,6 @@ class RevealOnScroll {
   calculateIfScrolledTo(el) {
     // do the caclation only if the item is already within the window
     if (window.scrollY + this.browserHeight > el.offsetTop) {
-      console.log("Element was calculated");
       let scrollPercent = (el.getBoundingClientRect().y / this.browserHeight) * 100;
       // item is revealed if it reaches 'revealOn' percentage of the view port
       if (scrollPercent < this.revealOn) {
@@ -64,4 +61,11 @@ class RevealOnScroll {
   }
 }
 
-export default RevealOnScroll
+document.addEventListener('DOMContentLoaded', e => {
+  new RevealOnScroll(document.querySelectorAll(".stack__fe"));
+  new RevealOnScroll(document.querySelectorAll(".stack__be"));
+  new RevealOnScroll(document.querySelectorAll(".stack__dev"));
+  new RevealOnScroll(document.querySelectorAll(".recent-work__cards"));
+  new RevealOnScroll(document.querySelectorAll(".responsibilities ul"));
+  new RevealOnScroll(document.querySelectorAll(".contact p"));
+})

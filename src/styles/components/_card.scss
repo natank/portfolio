@@ -63,7 +63,8 @@
             display: flex;
             opacity: 1;
             visibility: visible;
-        }        
+        }
+        
     }
 }
 
@@ -71,14 +72,24 @@
     &__content{
         position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         padding: 2rem 2rem;
         text-align: left;
         background-color: $color-secondary;
+        @include m-screen-md {
+            flex-direction: row;
+        }
     }
     &__img {
-        width: 30%;
+        width: 100%;
+        @include m-screen-sm {
+            width: 60%;
+        }
+        @include m-screen-md {
+            width: 30%;
+        }
         display: flex;
         align-items: center;
         img {
@@ -87,7 +98,14 @@
         }   
     }
     &__info {
-        width: 60%;
+        width: 100%;
+        max-width: 680px;
+        @include m-screen-sm {
+            width: 60%;
+        }
+        @include m-screen-md{
+            width: 65%;
+        }
     }
     &__close {
         position: absolute;

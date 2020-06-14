@@ -121,6 +121,7 @@
       font-size: .75rem;
       padding: .5rem .5rem;
       text-transform: uppercase;
+      transition: all 0.2s linear;
     }
     .current {
       border-bottom: 1px solid $color-secondary;

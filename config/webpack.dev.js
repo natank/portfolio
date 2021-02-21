@@ -3,7 +3,6 @@ const webpack = require("webpack");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const isDevelopment = process.env.NODE_ENV !== 'production'
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-
 module.exports = {
   entry: {
     main: [
